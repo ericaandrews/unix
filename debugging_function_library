@@ -184,19 +184,39 @@ set to the output of that function call, the 3rd variable is the parameter(s) to
          + alias sl=ls
          bash-3.2$ sl
          + ls
-         500					          Public				      myscript.sh
-         =					            cleanuptrap.sh		  out.log
-         Applications	          doit.sh				      output.log
-         Creative Cloud Files	  echo					      redirection
-         Desktop				        file1				        s.sh
-         Documents			        function_example.sh	sayword.sh
-         Downloads			        functions			      script.sh
-         IdeaProjects			      hello.sh				    started
-         Library				        my.sh				        test.sh
-         Movies				          myfunctions.script	}
-         Music				          myfunctions.sh
-         Pictures				        myscript
-         
+         500			
+         =		 	
+         Applications	        
+         Creative Cloud Files	
+         Desktop		
+         Documents	 	
+         Downloads			  
+         IdeaProjects		
+         Library		
+         Movies			
+         Music			
+         Pictures		
+	 Public		 
+	 myscript.sh
+         cleanuptrap.sh 	  
+	 out.log
+	 doit.sh		  
+	 output.log
+	 echo		  
+	 redirection
+	 }
+	 file1		  
+	 s.sh
+	 function_example.sh
+	 sayword.sh
+	 functio	
+	 hello.s		  
+	 started
+	 my.sh		  
+	 test.sh 
+	 myfunctions.sh
+	 myscript
+	 
 -Terminal Output:
          bash-3.2$ alias dwp=pwd
          + alias dwp=pwd
@@ -213,18 +233,38 @@ set to the output of that function call, the 3rd variable is the parameter(s) to
          + alias that=setval
          bash-3.2$ that
          + ls
-         500			            Public			        myscript.sh
-         =			              cleanuptrap.sh		  out.log
-         Applications		      doit.sh			        output.log
-         Creative Cloud Files	echo			          redirection
-         Desktop			        file1			          s.sh
-         Documents		        function_example.sh	sayword.sh
-         Downloads		        functions		        script.sh
-         IdeaProjects		      hello.sh		        started
-         Library			        my.sh			          test.sh
-         Movies			          myfunctions.script	}
-         Music			          myfunctions.sh
-         Pictures		          myscript
+         500			
+         =		 	
+         Applications	        
+         Creative Cloud Files	
+         Desktop		
+         Documents	 	
+         Downloads			  
+         IdeaProjects		
+         Library		
+         Movies			
+         Music			
+         Pictures		
+	 Public		 
+	 myscript.sh
+         cleanuptrap.sh 	  
+	 out.log
+	 doit.sh		  
+	 output.log
+	 echo		  
+	 redirection
+	 }
+	 file1		  
+	 s.sh
+	 function_example.sh
+	 sayword.sh
+	 functio	
+	 hello.s		  
+	 started
+	 my.sh		  
+	 test.sh 
+	 myfunctions.sh
+	 myscript
 
 -Terminal Output:
          bash-3.2$ something="Did you say something"
