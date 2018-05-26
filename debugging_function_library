@@ -1,8 +1,8 @@
 -Unix/Linux Bash Shell Scripting
 -Create a function library script which contains any functions and aliases.
 -Based on input from the user, enable or disable debugging.
-    	•	set -x
-	    •	set +x
+    	•set -x
+	•set +x
       
 -Terminal Output:
         bash-3.2$ script myscript.sh
