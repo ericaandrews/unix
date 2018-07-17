@@ -1,0 +1,63 @@
+-Unix/Linux Bash Shell Scripting
+-Write a bash shell script which does the following:
+  -Uses a simple if statement to test for existence of a file:
+      
+      Ericas-MacBook-Air:~ ericaandrews$ if [ -e Desktop/Untitled.txt ]
+      > then
+      > echo "Untitled.txt file exists"
+      > else
+      > echo "Untitled.txt file does not exists"
+      > fi
+      Untitled.txt file exists
+      
+   -If the file exists display the file size and name:
+      (you can get the file size using the ls or stat commands -- man stat; man ls;)
+      
+      Ericas-MacBook-Air:~ ericaandrews$ ls Desktop
+      Screen Shot 2018-03-02 at 12.11.48 PM.png
+      Untitled.txt
+      aa_certificates_resume_transcripts
+      basicFaxCover.pages
+      basicFaxCover.pdf
+      photos
+      shell_scripting
+      volunteer
+      
+      Ericas-MacBook-Air:~ ericaandrews$ stat Desktop
+      16777220 615608 drwx------ 15 ericaandrews staff 0 510 "Jul 17 13:51:37 2018" 
+      "Jul 17 13:51:22 2018" "Jul 17 13:51:22 2018" "Jul  8 15:33:09 2015" 4096 0 0 Desktop
+
+  -Use an if/then/else statement to check if a particular directory exists:
+  -If it does exist, then output a friendly message indicating the directory exists: 
+      
+      Ericas-MacBook-Air:~ ericaandrews$ if [ -d Desktop ]
+      > then
+      > echo "Desktop does exists"
+      > else
+      > echo "Desktop does not exists"
+      > fi
+      Desktop does exists
+      
+  -If it doesn't exist, then create the directory:
+      
+      Ericas-MacBook-Air:~ ericaandrews$ if [ -d Untitled ]
+      > then
+      > echo "Desktop does exists"
+      > else
+      > echo "Desktop does not exists"
+      > fi
+      Desktop does not exists
+      Ericas-MacBook-Air:~ ericaandrews$ mkdir Untitled
+      Ericas-MacBook-Air:~ ericaandrews$ if [ -d Untitled ]
+      > then
+      > echo "Desktop does exists"
+      > else
+      > echo "Desktop does not exists"
+      > fi
+      Desktop does exists
+  
+      
+      
+      
+      
+      
