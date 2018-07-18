@@ -56,13 +56,32 @@
       > fi
       Desktop does exists
   
-  -Use an if/elif statement to test input from the user
+  -Use an if/elif statement to test input from the user:
   (use the read command to capture the input)
-  -Output something useful for each condition
+  -Output something useful for each condition:
     -Test for the following values:
       -number < 10, number between 50 and 100, number > 500
-        and then anything else. 
+        and then anything else: 
       
+      Ericas-MacBook-Air:~ ericaandrews$ echo -n "Enter a number > "
+      Enter a number > Ericas-MacBook-Air:~ ericaandrews$ read character
+      501
+      Ericas-MacBook-Air:~ ericaandrews$ if [ "$character" > "500" ]; then
+      > echo "You entered a number greater than five hundred."
+      > elif [ "$character" >= "50" && "$character" <= "100" ]; then
+      > echo "You entered a number greater than or equal to 50 and less than or equal to 100."
+      > elif [ "$character" < "10" ]; then
+      > echo "You entered a number less than 10."
+      > else
+      > echo "The number entered applies to one or more of the following conditions: "
+      > echo "Greater than or equal to 10"
+      > echo "Greater than 100"
+      > echo "Less than 50"
+      > echo "Less than or equal to 500"
+      > echo "Not a number"
+      > fi
+      You entered a number greater than five hundred.
       
+  -Use a switch statement to do implement the same conditions as the if/elif above:    
       
       
