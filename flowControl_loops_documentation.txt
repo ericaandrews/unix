@@ -56,7 +56,12 @@
       > fi
       Desktop does exists
   
-      
+  -Use an if/elif statement to test input from the user
+  (use the read command to capture the input)
+  -Output something useful for each condition
+    -Test for the following values:
+      -number < 10, number between 50 and 100, number > 500
+        and then anything else. 
       
       
       
