@@ -81,7 +81,4 @@
       > echo "Not a number"
       > fi
       You entered a number greater than five hundred.
-      
-  -Use a switch statement to do implement the same conditions as the if/elif above:    
-      
-      
+            
