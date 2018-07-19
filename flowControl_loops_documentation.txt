@@ -82,7 +82,7 @@
       > fi
       You entered a number greater than five hundred.
 
--Use a switch statement to implement the same conditions as the if/elif above
+-Use a switch statement to implement the same conditions as the if/elif above:
 
       Ericas-MacBook-Air:~ ericaandrews$ echo -n "Enter a number > "
       Enter a number > Ericas-MacBook-Air:~ ericaandrews$ read character
@@ -107,4 +107,28 @@
       Less than fifty
       Less than or equal to five hundred
       Not a number
+
+-Write a for loop which iterates through all the files in the current directory (*?):
+  -For each one, output whether it is a file or a directory:
+  
+      Ericas-MacBook-Air:~ ericaandrews$ for i in desktop/*
+      > do
+      > {
+      >   if [[ -f $i ]]
+      >   then
+      >     echo "$i is a file"
+      >   elif [[ -d $i ]]
+      >   then
+      >     echo "$i is directory"
+      >   fi
+      > }
+      > done
+      desktop/Screen Shot 2018-03-02 at 12.11.48 PM.png is a file
+      desktop/Untitled.txt is a file
+      desktop/aa_certificates_resume_transcripts is directory
+      desktop/basicFaxCover.pages is a file
+      desktop/basicFaxCover.pdf is a file
+      desktop/photos is directory
+      desktop/shell_scripting is directory
+      desktop/volunteer is directory
 
