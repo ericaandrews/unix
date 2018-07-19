@@ -81,4 +81,30 @@
       > echo "Not a number"
       > fi
       You entered a number greater than five hundred.
-            
+
+-Use a switch statement to implement the same conditions as the if/elif above
+
+      Ericas-MacBook-Air:~ ericaandrews$ echo -n "Enter a number > "
+      Enter a number > Ericas-MacBook-Air:~ ericaandrews$ read character
+      101
+      Ericas-MacBook-Air:~ ericaandrews$ case $character in
+      > 1 ) echo "You entered a number greater than five hundred."
+      >     ;;
+      > 2 ) echo "You entered a number greater than or equal to fifty and less than or equal to one hundred."
+      >     ;;
+      > 3 ) echo "You entered a number less than ten."
+      >     ;;
+      > * ) echo "The number entered applies to one or more of the following conditions: "
+      >     echo "Greater than or equal to ten"
+      >     echo "Greater than one hundred"
+      >     echo "Less than fifty"
+      >     echo "Less than or equal to five hundred"
+      >     echo "Not a number"
+      > esac
+      The number entered applies to one or more of the following conditions: 
+      Greater than or equal to ten
+      Greater than one hundred
+      Less than fifty
+      Less than or equal to five hundred
+      Not a number
+
