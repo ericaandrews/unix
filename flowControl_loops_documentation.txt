@@ -175,4 +175,33 @@
       12
       Number = 12
       
+-Write a script which implements a while loop: 
+  -Ask the user a yes or no question: 
+  -Keep asking until the answer is yes:
+    (also known as "a conversation with a 2 year old."):
+  
+      while true
+      > do
+      > {
+      >   read -p "Are you ok? Enter yes or no: " yn
+      >   case $yn in
+      >     [Yy]* ) "You entered yes. Ill ask again...";;
+      >     [Nn]* ) exit;;
+      >     * ) echo "Enter yes or no: ";;
+      >   esac
+      > }
+      > done
+      Are you ok? Enter yes or no: yes
+      -bash: You entered yes. Ill ask again...: command not found
+      Are you ok? Enter yes or no: yes
+      -bash: You entered yes. Ill ask again...: command not found
+      Are you ok? Enter yes or no: no
+      logout
+      Saving session...
+      ...copying shared history...
+      ...saving history...truncating history files...
+      ...completed.
+      Deleting expired sessions...638 completed. 
+      
+      [Process completed]
       
