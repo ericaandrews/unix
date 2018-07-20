@@ -132,3 +132,21 @@
       desktop/shell_scripting is directory
       desktop/volunteer is directory
 
+-Write a for loop which starts at 7, increments by 3, and ends when the number is >37:
+  -Output the number of each iteration of the loop
+  
+      Ericas-MacBook-Air:~ ericaandrews$ for (( i=7; i<=37; i+=3 ))
+      > do
+      >   echo $i
+      > done
+      7
+      10
+      13
+      16
+      19
+      22
+      25
+      28
+      31
+      34
+      37
