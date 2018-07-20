@@ -150,3 +150,29 @@
       31
       34
       37
+      
+-Write a script which implements a until loop:
+  -Ask the user to enter a number:
+  -Keep asking until the number is >10:
+
+      until [[ $character -gt 10 ]]
+      > do
+      > }
+      >   read character
+      >   echo "Number = $character"
+      > }
+      > done 
+      2
+      Number = 2
+      4
+      Number = 4
+      6
+      Number = 6
+      8
+      Number = 8
+      10
+      Number = 10
+      12
+      Number = 12
+      
+      
