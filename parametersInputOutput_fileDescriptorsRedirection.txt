@@ -37,8 +37,8 @@ The first script should take input from the user using the "read" command.
       ls: file.txt: No such file or directory
   
   -Create a command line option "-d" which, if given, will allow the user to enter the name of 
-    the directory to moved into the "dirs.txt" file. The directory should be created before creating
-    the command line option. The file can be created before creating the command line option or 
+    the directory to be moved into the "dirs.txt" file. The directory should be created before creating
+    the command line option. The "dirs.txt" file can be created before creating the command line option or 
     within the 'if-statement'. 
     
     $ mkdir directoryone
@@ -54,3 +54,22 @@ The first script should take input from the user using the "read" command.
     Enter the name of the directory to be moved into the dirs.txt file: directoryone
     $ cat dirs.txt
     directoryone
+  
+  -Create a command line option "-f" which, if given, will allow the user to enter the name of 
+   the file to be moved into the "dirs.txt" file. The file should be created before creating the 
+   command line option. The "dirs.txt" file can be created before creating the command line option or
+   within the 'if-statement'. 
+   
+   $ > file.txt
+   $ while read -p "Enter the name of the file to be moved into the dirs.txt file: " name
+     > do
+     >  if [ -f $name ]; then
+     >  > dirs.txt
+     >  mv dirs.txt $name
+     >  echo $name >> dirs.txt
+     >  break
+     > fi
+     > done
+     Enter the name of the file to be moved into the dirs.txt file: file.txt
+     $ cat dirs.txt
+     file.txt
