@@ -41,6 +41,7 @@ The first script should take input from the user using the "read" command.
     the command line option. The file can be created before creating the command line option or 
     within the 'if-statement'. 
     
+    $ mkdir directoryone
     $ while read -p "Enter the name of the directory to be moved into the dirs.txt file: " name
       > do
       >  if [ -d $name ]; then
