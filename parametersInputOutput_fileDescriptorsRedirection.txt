@@ -53,9 +53,3 @@ The first script should take input from the user using the "read" command.
     Enter the name of the directory to be moved into the dirs.txt file: directoryone
     $ cat dirs.txt
     directoryone
-
-
-
-  
-  
-  
