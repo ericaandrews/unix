@@ -42,14 +42,14 @@ The first script should take input from the user using the "read" command.
     within the 'if-statement'. 
     
     $ while read -p "Enter the name of the directory to be moved into the dirs.txt file: " name
-    > do
-    >   if [ -d $name ]; then
-    >   > dirs.txt
-    >   mv dirs.txt $name
-    >   echo $name >> dirs.txt
-    >   break
-    > fi
-    > done
+      > do
+      >  if [ -d $name ]; then
+      >  > dirs.txt
+      >  mv dirs.txt $name
+      >  echo $name >> dirs.txt
+      >  break
+      > fi
+      > done
     Enter the name of the directory to be moved into the dirs.txt file: directoryone
     $ cat dirs.txt
     directoryone
