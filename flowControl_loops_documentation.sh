@@ -2,7 +2,7 @@
 -Write a bash shell script which does the following:
   -Uses a simple if statement to test for existence of a file:
       
-      Ericas-MacBook-Air:~ ericaandrews$ if [ -e Desktop/Untitled.txt ]
+      $ if [ -e Desktop/Untitled.txt ]
       > then
       > echo "Untitled.txt file exists"
       > else
@@ -13,7 +13,7 @@
    -If the file exists display the file size and name:
       (you can get the file size using the ls or stat commands -- man stat; man ls;)
       
-      Ericas-MacBook-Air:~ ericaandrews$ ls Desktop
+      $ ls Desktop
       Screen Shot 2018-03-02 at 12.11.48 PM.png
       Untitled.txt
       aa_certificates_resume_transcripts
@@ -23,14 +23,15 @@
       shell_scripting
       volunteer
       
-      Ericas-MacBook-Air:~ ericaandrews$ stat Desktop
+      $ stat Desktop
       16777220 615608 drwx------ 15 ericaandrews staff 0 510 "Jul 17 13:51:37 2018" 
       "Jul 17 13:51:22 2018" "Jul 17 13:51:22 2018" "Jul  8 15:33:09 2015" 4096 0 0 Desktop
+    #############################################################################################
 
   -Use an if/then/else statement to check if a particular directory exists:
   -If it does exist, then output a friendly message indicating the directory exists: 
       
-      Ericas-MacBook-Air:~ ericaandrews$ if [ -d Desktop ]
+      $ if [ -d Desktop ]
       > then
       > echo "Desktop does exists"
       > else
@@ -40,22 +41,23 @@
       
   -If it doesn't exist, then create the directory:
       
-      Ericas-MacBook-Air:~ ericaandrews$ if [ -d Untitled ]
+      $ if [ -d Untitled ]
       > then
       > echo "Desktop does exists"
       > else
       > echo "Desktop does not exists"
       > fi
       Desktop does not exists
-      Ericas-MacBook-Air:~ ericaandrews$ mkdir Untitled
-      Ericas-MacBook-Air:~ ericaandrews$ if [ -d Untitled ]
+      $ mkdir Untitled
+      $ if [ -d Untitled ]
       > then
       > echo "Desktop does exists"
       > else
       > echo "Desktop does not exists"
       > fi
       Desktop does exists
-  
+      #############################################################################################
+
   -Use an if/elif statement to test input from the user:
   (use the read command to capture the input)
   -Output something useful for each condition:
@@ -63,10 +65,10 @@
       -number < 10, number between 50 and 100, number > 500
         and then anything else: 
       
-      Ericas-MacBook-Air:~ ericaandrews$ echo -n "Enter a number > "
-      Enter a number > Ericas-MacBook-Air:~ ericaandrews$ read character
+      $ echo -n "Enter a number > "
+      Enter a number > $ read character
       501
-      Ericas-MacBook-Air:~ ericaandrews$ if [ "$character" > "500" ]; then
+      $ if [ "$character" > "500" ]; then
       > echo "You entered a number greater than five hundred."
       > elif [ "$character" >= "50" && "$character" <= "100" ]; then
       > echo "You entered a number greater than or equal to 50 and less than or equal to 100."
@@ -84,10 +86,10 @@
 
 -Use a switch statement to implement the same conditions as the if/elif above:
 
-      Ericas-MacBook-Air:~ ericaandrews$ echo -n "Enter a number > "
-      Enter a number > Ericas-MacBook-Air:~ ericaandrews$ read character
+      $ echo -n "Enter a number > "
+      Enter a number > $ read character
       101
-      Ericas-MacBook-Air:~ ericaandrews$ case $character in
+      $ case $character in
       > 1 ) echo "You entered a number greater than five hundred."
       >     ;;
       > 2 ) echo "You entered a number greater than or equal to fifty and less than or equal to one hundred."
@@ -107,11 +109,12 @@
       Less than fifty
       Less than or equal to five hundred
       Not a number
+    #############################################################################################
 
 -Write a for loop which iterates through all the files in the current directory (*?):
   -For each one, output whether it is a file or a directory:
   
-      Ericas-MacBook-Air:~ ericaandrews$ for i in desktop/*
+      $ for i in desktop/*
       > do
       > {
       >   if [[ -f $i ]]
@@ -131,11 +134,12 @@
       desktop/photos is directory
       desktop/shell_scripting is directory
       desktop/volunteer is directory
+    #############################################################################################
 
 -Write a for loop which starts at 7, increments by 3, and ends when the number is >37:
   -Output the number of each iteration of the loop
   
-      Ericas-MacBook-Air:~ ericaandrews$ for (( i=7; i<=37; i+=3 ))
+      $ for (( i=7; i<=37; i+=3 ))
       > do
       >   echo $i
       > done
@@ -150,7 +154,8 @@
       31
       34
       37
-      
+   #############################################################################################
+  
 -Write a script which implements a until loop:
   -Ask the user to enter a number:
   -Keep asking until the number is >10:
@@ -174,13 +179,14 @@
       Number = 10
       12
       Number = 12
-      
+    #############################################################################################
+
 -Write a script which implements a while loop: 
   -Ask the user a yes or no question: 
   -Keep asking until the answer is yes:
     (also known as "a conversation with a 2 year old."):
   
-      Ericas-MacBook-Air:~ ericaandrews$ while true
+      $ while true
       > do
       > {
       >   read -p "Are you ok? Enter yes or no: " yn
