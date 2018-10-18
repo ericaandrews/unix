@@ -13,15 +13,15 @@ Output:
     
     $echo "My home directory is $HOME"
     My home directory is /Users/ericaandrews
-    
-    
+#############################################################################################
+
 Task B: Write a Unix command to display your login and the system date with both
 commands on one line (the output may be on seperate lines):
         
     $logname;date
     ericaandrews
     Sat Aug 25 16:34:07 PDT 2018
-    
+#############################################################################################    
     
  Task C: 
   -Write a Unix command that will redirect (>) the results of the server name 
@@ -33,15 +33,15 @@ commands on one line (the output may be on seperate lines):
   file called temp1; Note: no output is produced:
       
     $uptime >> temp1  
-         
-         
+#############################################################################################
+          
 Task D: Write a Unix command that will display the contents (concatenate) of the file
 called temp1:
 
     $ cat temp1
     This is the contents of the file called temp1
-    
-    
+#############################################################################################
+     
 Task E: Using a pipe, write a UNIX command that will paginate (using pr) the output of the 
 who command to 20 lines per page, 2 columns with line numbering: 
   
