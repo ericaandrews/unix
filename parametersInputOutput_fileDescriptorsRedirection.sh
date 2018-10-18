@@ -16,7 +16,8 @@ The first script should take input from the user using the "read" command.
     Enter the name of the directory to store the dirs.txt file: directory
     $ ls directory
     dirs.txt
-    
+    *****************************************************************************
+
   -Create a command line option "-f" which, if given, will allow the user to change the name of 
     the "file.txt" file. This file, and a file with the new name, should be created 
     before creating the command line option. 
@@ -35,7 +36,8 @@ The first script should take input from the user using the "read" command.
       newfilename.txt
     $ ls file.txt
       ls: file.txt: No such file or directory
-  
+  *****************************************************************************
+
   -Create a command line option "-d" which, if given, will allow the user to enter the name of 
     the directory to be moved into the "dirs.txt" file. The directory should be created before creating
     the command line option. The "dirs.txt" file can be created before creating the command line option or 
@@ -54,7 +56,8 @@ The first script should take input from the user using the "read" command.
     Enter the name of the directory to be moved into the dirs.txt file: directoryone
     $ cat dirs.txt
     directoryone
-  
+*****************************************************************************
+
   -Create a command line option "-f" which, if given, will allow the user to enter the name of 
    the file to be moved into the "dirs.txt" file. The file should be created before creating the 
    command line option. The "dirs.txt" file can be created before creating the command line option or
@@ -73,3 +76,56 @@ The first script should take input from the user using the "read" command.
      Enter the name of the file to be moved into the dirs.txt file: file.txt
      $ cat dirs.txt
      file.txt
+*****************************************************************************
+
+-Create a command line option “-d” which, if given, will allow the user to store a directory into the “dirs.txt” file. 
+This file, and the directory, should be created before creating the command line option. 
+
+$ > dirs.txt
+$ mkdir directoryone
+$ mkdir directorytwo
+$ mkdir directory three
+$ while read -p "Enter the name of the directory to be moved into the dirs.txt file: " name
+> do
+>  if [ -d $name ]; then
+>  echo $name >> dirs.txt
+>  break
+> fi
+> done
+Enter the name of the directory to be moved into the dirs.txt file: directoryone
+$ cat dirs.txt
+directoryone
+
+*****************************************************************************
+
+-Create a script of the previous command line arguments and allow the user to input using the “read” command. 
+Remove the directory of the ‘dirs.txt’ file before creating the script.
+
+$ cat > myscript.sh
+while read -p "Enter the name of the directory to be moved into the dirs.txt file: " name
+do
+ if [ -d $name ]; then
+ echo $name >> dirs.txt
+ break
+fi
+done
+control^D
+$ chmod +x myscript.sh
+$ ./myscript.sh
+Enter the name of the directory to be moved into the dirs.txt file: directoryone
+$ cat dirs.txt
+directoryone
+$ ./myscript.sh
+Enter the name of the directory to be moved into the dirs.txt file: directorytwo
+$ cat dirs.txt
+directoryone
+directorytwo
+$ ./myscript.sh
+Enter the name of the directory to be moved into the dirs.txt file: 
+directorythree
+$ cat dirs.txt
+directoryone
+directorytwo
+directorythree
+
+
