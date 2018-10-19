@@ -175,4 +175,31 @@ $ cat files.txt
 fileone.txt
 filetwo.txt
 filethree.txt
+    #############################################################################################
+
+-Create a script to read and output the names of the directories from the ‘dirs.txt’ file and the files from the file called ‘files.txt’. 
+Use a positional parameter ‘1’ for the ‘dirs.txt’ file and parameter ‘2’ for the file called ‘files.txt’. 
+Optional: Use the ‘stat’ command to print each of the files size. 
+
+$ cat > myscriptthree.sh
+function myfunction(){ 
+cat $1;
+cat $2;
+}
+myfunction dirs.txt files.txt
+$ chmod +x myscriptthree.sh
+$ ./myscriptthree.sh
+directoryone
+directorytwo
+directorythree
+fileone.txt
+filetwo.txt
+filethree.txt
+$ stat fileone.txt
+16777220 7750974 -rw-r--r-- 1 ericaandrews staff 0 0 "Oct 19 06:35:57 2018" "Oct 19 06:35:07 2018" "Oct 19 06:35:07 2018" "Oct 17 20:25:50 2018" 4096 0 0 fileone.txt
+$ stat filetwo.txt
+16777220 7751026 -rw-r--r-- 1 ericaandrews staff 0 0 "Oct 17 20:27:04 2018" "Oct 19 06:35:14 2018" "Oct 19 06:35:14 2018" "Oct 17 20:27:04 2018" 4096 0 0 filetwo.txt
+$ stat filethree.txt
+16777220 7751062 -rw-r--r-- 1 ericaandrews staff 0 0 "Oct 17 20:27:58 2018" "Oct 19 06:35:21 2018" "Oct 19 06:35:21 2018" "Oct 17 20:27:58 2018" 4096 0 0 filethree.txt
+
 
