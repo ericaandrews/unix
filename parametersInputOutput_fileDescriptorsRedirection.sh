@@ -128,4 +128,54 @@ directoryone
 directorytwo
 directorythree
 
+    #############################################################################################
+
+-Create a command line option “-f” which, if given, will allow the user to store a file into a file called “files.txt”. These files should be created before creating the command line option.
+
+$ > files.txt
+$ > fileone.txt
+$ > filetwo.txt
+$ > filethree.txt
+$ while read -p "Enter the name of the file to be moved into the file called files.txt: " name
+> do
+> if [ -f $name ]; then
+> echo $name >> files.txt
+> break
+> fi
+> done
+Enter the name of the file to be moved into the file called files.txt: 
+fileone.txt
+$ cat files.txt
+fileone.txt
+
+    #############################################################################################
+
+-Create a script of the previous command line arguments and allow the user to input using the “read” command. Remove the files of the file named ‘files.txt’ before creating the script.
+
+$ cat > myscripttwo.sh
+while read -p "Enter the name of the file to be moved into the file called files.txt: " name
+do
+if [ -f $name ]; then
+echo $name >> files.txt
+break
+fi
+done
+$ chmod +x myscripttwo.sh
+$ ./myscripttwo.sh
+Enter the name of the file to be moved into the file called files.txt:
+fileone.txt
+$ cat files.txt
+fileone.txt
+$ ./myscripttwo.sh
+Enter the name of the file to be moved into the file called files.txt:
+filetwo.txt
+$ cat files.txt
+fileone.txt
+filetwo.txt
+$ ./myscripttwo.sh
+Enter the name of the file to be moved into the file called files.txt: filethree.txt
+$ cat files.txt
+fileone.txt
+filetwo.txt
+filethree.txt
 
