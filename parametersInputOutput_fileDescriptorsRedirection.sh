@@ -159,6 +159,7 @@ echo $name >> files.txt
 break
 fi
 done
+control^D
 $ chmod +x myscripttwo.sh
 $ ./myscripttwo.sh
 Enter the name of the file to be moved into the file called files.txt: fileone.txt
@@ -187,6 +188,7 @@ cat $1;
 cat $2;
 }
 myfunction dirs.txt files.txt
+control^D
 $ chmod +x myscriptthree.sh
 $ ./myscriptthree.sh
 directoryone
@@ -201,5 +203,54 @@ $ stat filetwo.txt
 16777220 7751026 -rw-r--r-- 1 ericaandrews staff 0 0 "Oct 17 20:27:04 2018" "Oct 19 06:35:14 2018" "Oct 19 06:35:14 2018" "Oct 17 20:27:04 2018" 4096 0 0 filetwo.txt
 $ stat filethree.txt
 16777220 7751062 -rw-r--r-- 1 ericaandrews staff 0 0 "Oct 17 20:27:58 2018" "Oct 19 06:35:21 2018" "Oct 19 06:35:21 2018" "Oct 17 20:27:58 2018" 4096 0 0 filethree.txt
+    #############################################################################################
 
+-Create a script that will run the previous three scripts and will take zero or one parameters. 
+Create an error message to produce and exit if more than one parameter is given. 
+Remove the directories and files of the ’dirs.txt’ file and the file called ‘files.txt’ before creating the script.  
 
+$ cat > myscriptfour.sh
+while read -p "Enter a name for a parameter: " name
+do
+function myfunctiontwo(){
+if [ $2 == ]; then
+./myscript.sh
+./myscripttwo.sh       
+./myscriptthree.sh
+else
+echo "Only one parameter allowed."
+fi
+}
+myfunctiontwo $name
+break
+done
+control^D
+$ chmod +x myscriptfour.sh
+$ ./myscriptfour.sh
+Enter a name for a parameter:              
+Enter the name of the directory to be moved into the dirs.txt file: directoryone
+Enter the name of the file to be moved into the file called files.txt: fileone.txt
+directoryone
+fileone.txt
+$ ./myscriptfour.sh
+Enter a name for a parameter: parameterone
+Enter the name of the directory to be moved into the dirs.txt file: directorytwo
+Enter the name of the file to be moved into the file called files.txt: filetwo.txt
+directoryone
+directorytwo
+fileone.txt
+filetwo.txt
+$ ./myscriptfour.sh
+Enter a name for a parameter: parameterone parametertwo
+./myscriptfour.sh: line 4: [: parametertwo: unary operator expected
+Only one parameter allowed.
+$ ./myscriptfour.sh
+Enter a name for a parameter: 
+Enter the name of the directory to be moved into the dirs.txt file: directorythree
+Enter the name of the file to be moved into the file called files.txt: filethree.txt
+directoryone
+directorytwo
+directorythree
+fileone.txt
+filetwo.txt
+filethree.txt
