@@ -95,7 +95,6 @@ $ while read -p "Enter the name of the directory to be moved into the dirs.txt f
 Enter the name of the directory to be moved into the dirs.txt file: directoryone
 $ cat dirs.txt
 directoryone
-
     #############################################################################################
 
 -Create a script of the previous command line arguments and allow the user to input using the “read” command. 
@@ -127,7 +126,6 @@ $ cat dirs.txt
 directoryone
 directorytwo
 directorythree
-
     #############################################################################################
 
 -Create a command line option “-f” which, if given, will allow the user to store a file into a file called “files.txt”. 
@@ -148,7 +146,6 @@ Enter the name of the file to be moved into the file called files.txt:
 fileone.txt
 $ cat files.txt
 fileone.txt
-
     #############################################################################################
 
 -Create a script of the previous command line arguments and allow the user to input using the “read” command. 
