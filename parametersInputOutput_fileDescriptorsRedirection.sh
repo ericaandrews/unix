@@ -206,7 +206,7 @@ $ stat filethree.txt
     #############################################################################################
 
 -Create a script that will run the previous three scripts and will take zero or one parameters. 
-Create an error message to produce and exit if more than one parameter is given. 
+Create an error message to produce and exit if more than one parameter is given and test the script with different parameters. 
 Remove the directories and files of the ’dirs.txt’ file and the file called ‘files.txt’ before creating the script.  
 
 $ cat > myscriptfour.sh
