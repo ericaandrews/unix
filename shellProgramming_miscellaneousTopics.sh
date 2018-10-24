@@ -1,4 +1,4 @@
-- Create a script which sets several variables and then unsets some of the variables. 
+-Create a script which sets several variables and then unsets some of the variables. 
 Demonstrate that the variables have been unset.
 
 $ script
@@ -20,7 +20,7 @@ bash-3.2$ echo $varone $vartwo $varthree $varfour $varfive
 bash-3.2$ exit
 control^D
 Script done, output file is typescript
-*****************************************************************************
+##########################################################################################
 
 
 -Set a few constants and attempt to change and unset the values of the constant variables. 
@@ -45,7 +45,7 @@ $ CONSTVARTHREE="one"
 -bash: CONSTVARTHREE: readonly variable
 $ CONSTVARFOUR="two"
 -bash: CONSTVARFOUR: readonly variable
-*****************************************************************************
+##########################################################################################
 
 
 -Create several aliases:
@@ -108,18 +108,20 @@ $ etad
 real	0m0.001s
 user	0m0.000s
 sys	0m0.000s
-*****************************************************************************
+##########################################################################################
+
 $ declare -r CONSTALIAS="this constant cannot be changed"
 $ echo $CONSTALIAS
 this constant cannot be changed
 $ alias etad=$CONSTALIAS
 $ alias etad
 alias etad='this constant cannot be changed'
-*****************************************************************************
+##########################################################################################
+
 $ alias etad=$varalias=$CONSTALIAS
 $ alias etad
 alias etad='time=this constant cannot be changed'
-*****************************************************************************
+##########################################################################################
 
 
 -Create a script which uses read to get input from a user in a case
@@ -143,7 +145,7 @@ Good.
 $ ./script.sh
 Are you alright? Enter y or n: n
 Not good.
-*****************************************************************************
+##########################################################################################
 
 
 -Create a file with text in it and use exec to redirect input from the file with the text in it. 
